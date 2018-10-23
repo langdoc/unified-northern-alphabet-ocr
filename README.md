@@ -12,6 +12,6 @@ Individual pages were extracted with commands:
 
 You can edit the lines by modifying `temp-correction.html` file in Firefox and saving the file. Chrome will not save the edited lines! If you use some esoteric browser, please try first! The lines can be written back to correct place with:
 
-    ocropus-gtedit extract temp-correction.html 
+    ocropus-gtedit extract -O temp-correction.html 
 
-If the line is not properly recognized, then leave it empty. Those will be fixed later.
+If the line is not properly recognized, then leave it empty. Those will be fixed later. Flag -O is important, it does the overwrite.
