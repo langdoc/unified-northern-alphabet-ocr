@@ -15,3 +15,7 @@ You can edit the lines by modifying `temp-correction.html` file in Firefox and s
     ocropus-gtedit extract -O temp-correction.html 
 
 If the line is not properly recognized, then leave it empty. Those will be fixed later. Flag -O is important, it does the overwrite.
+
+The training has been tested with:
+
+    ocropus-rtrain -c ./train/*/*gt.txt -o una-01-42c0895 -d 20 ./train/*/*png
