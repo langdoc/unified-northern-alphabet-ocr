@@ -16,6 +16,11 @@ You can edit the lines by modifying `temp-correction.html` file in Firefox and s
 
 If the line is not properly recognized, then leave it empty. Those will be fixed later. Flag -O is important, it does the overwrite.
 
-The training has been tested with:
+The training has been tested with something like:
 
-    ocropus-rtrain -c ./train/*/*gt.txt -o una-01-42c0895 -d 20 ./train/*/*png
+    cd test
+    ocropus-nlbin raw/*.tif -o test
+    ocropus-gpageseg 'test/*.bin.png'
+    ocropus-rpred -Q 4 -m ../una-01-58a2a7-00137000.pyrnn.gz 'test/*/*.bin.png'
+    ocropus-hocr 'test/*.bin.png' -o test.html
+
