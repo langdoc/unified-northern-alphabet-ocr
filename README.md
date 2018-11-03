@@ -1,8 +1,10 @@
 ## Unified Northern Alphabet OCR
 
-This is an attempt to build an OCR system for the languages written in Unified Northern Alphabet. Ideally there would be samples from all languages with which it is used. Only Public Domain data is used. The pages originate from the (Fenno-Ugrica collection)[http://fennougrica.kansalliskirjasto.fi/], citations will be added soon.
+This is an attempt to build an OCR system for the languages written in Unified Northern Alphabet. Ideally there would be samples from all languages with which it is used. Only Public Domain data is used. The pages originate from the [Fenno-Ugrica collection](http://fennougrica.kansalliskirjasto.fi/), citations will be added soon.
 
 In the 1930s, the so-called Unified Northern Alphabet (Единый северный алфавит) was used for creating literacy in 16 different languages of the Soviet Union. In this dataset there are sentences from four of them: Kildin Saami (sjd, kild1236), Northern Selkup (Selkup: sel, selk1253), Northern Mansi (Mansi: mns, mans1258) and Tundra Nenets (yrk, tund1255). 
+
+The data in this repository will primarily contain Ground Truth files for training OCR systems, but also the intermediate workflows and processing steps will be documented to the extend that is reasonable.
 
 If you want to get a quick idea of what this is about, just clone the repository and open file `temp-correction-1.html` in Firefox.
 
