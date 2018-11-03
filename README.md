@@ -32,11 +32,18 @@ Individual pages were extracted with commands:
     ocropus-nlbin raw_part_1/*.png -o train_part_1
     ocropus-gpageseg 'train_part_1/*.bin.png'
     ocropus-gtedit html train_part_1/*/*.png -o temp-correction-1.html
-
+    # Initial OCR result was copied semi-manually from Fenno-Ugrica OCR
+    # In alter iterations the model trained with this data was used
 
     ocropus-nlbin raw_part_2/*.png -o train_part_2
     ocropus-gpageseg 'train_part_2/*.bin.png'
+    ocropus-rpred -Q 4 -m ./models/02/una-02-d05059-00102000.pyrnn.gz 'train_part_2/*/*.bin.png'
     ocropus-gtedit html train_part_2/*/*.png -o temp-correction-2.html
+    
+    ocropus-nlbin raw_part_3/*.png -o train_part_3
+    ocropus-gpageseg 'train_part_3/*.bin.png'
+    ocropus-rpred -Q 4 -m ./models/02/una-02-d05059-00102000.pyrnn.gz 'train_part_3/*/*.bin.png'
+    ocropus-gtedit html train_part_3/*/*.png -o temp-correction-3.html
 ```
 
 You can edit the lines by modifying `temp-correction` files in Firefox and saving the file. Chrome will not save the edited lines! If you use some esoteric browser, please try first! The lines can be written back to correct place with:
@@ -44,6 +51,7 @@ You can edit the lines by modifying `temp-correction` files in Firefox and savin
 ```
     ocropus-gtedit extract -O temp-correction-1.html
     ocropus-gtedit extract -O temp-correction-2.html
+    ocropus-gtedit extract -O temp-correction-3.html
 ```
 
 Adding the lines GitHub can be done with:
@@ -53,6 +61,8 @@ Adding the lines GitHub can be done with:
     git add train_part_1/*/*txt
     git add train_part_2/*/*png
     git add train_part_2/*/*txt
+    git add train_part_3/*/*png
+    git add train_part_3/*/*txt
 ```
 
 This will not add all extracted full pages, just in order to save the page. The OCR systems basically need just the lines for training, although the goal is to archive the whole dataset and pipeline from raw images to the finished lines.
