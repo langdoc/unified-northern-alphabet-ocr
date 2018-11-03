@@ -10,7 +10,11 @@ The model creation process was iterative, so that new data was added in several 
 
 Training data looks essentially like this:
 
-![- Ņajt hum samaꜧe os aꜧmьl jem-](/train_part_2/0004/010001.bin.png )
+![](/train_part_2/0004/010001.bin.png )
+
+Corresponding to the text file with content:
+
+`- Ņajt hum samaꜧe os aꜧmьl jem-`
 
 ## Commands used
 
