@@ -4,6 +4,8 @@ This is an attempt to build an OCR system for the languages written in Unified N
 
 Unified Northern Alphabet was used for 16 different languages. In this dataset there are sentences from four of them: Kildin Saami, Northern Selkup, Northern Mansi and Tundra Nenets. 
 
+If you want to get a quick idea of what this is about, just clone the repository and open file `temp-correction-1.html` in Firefox.
+
 ## Training process
 
 The model creation process was iterative, so that new data was added in several batches, each having been OCR'd with the model trained on data that had accumulated into that point. The iterations 1 and 2 contained simply data from all books in consecutive page order, with no attention to content. In the iteration 3 (planned) the page balance will be bit different, in order to achieve the wanted number of individual lines.
@@ -41,14 +43,16 @@ You can edit the lines by modifying `temp-correction` files in Firefox and savin
 
 ```
     ocropus-gtedit extract -O temp-correction-1.html
-    ocropus-gtedit extract -O temp-correction-1.html
+    ocropus-gtedit extract -O temp-correction-2.html
 ```
 
 Adding the lines GitHub can be done with:
 
 ```
-    add train_part_X/*/*png
-    add train_part_X/*/*txt
+    git add train_part_1/*/*png
+    git add train_part_1/*/*txt
+    git add train_part_2/*/*png
+    git add train_part_2/*/*txt
 ```
 
 This will not add all extracted full pages, just in order to save the page. The OCR systems basically need just the lines for training, although the goal is to archive the whole dataset and pipeline from raw images to the finished lines.
