@@ -1,0 +1,8 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*pyrnn.gz
+*pseg.png
+*nrm.png
+.DS_Store
