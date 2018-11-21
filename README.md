@@ -15,7 +15,13 @@ The data in this repository will primarily contain Ground Truth files for traini
 
 If you want to get a quick idea of what this is about, just clone the repository and open file `temp-correction-1.html` in Firefox.
 
-The file `meta.csv` contains additional information about lines that are written on distinct fonts, i.e. titles.
+Language and line specific metadata is stored in the file `meta_pages.csv`. The file `meta_extra.csv` contains additional information about lines that are written on distinct fonts, i.e. titles. 
+
+## Authors and reuse
+
+This work has been done by Niko Partanen and Michael Rießler in Kone Foundation funded [IKDP-2](https://langdoc.github.io/IKDP-2/) research project. Please cite it using following template:
+
+    Partanen, Niko & Rießler, Michael 2018: Unified Northern Alphabet Ground Truth Package. [RELEASE VERSION]. [ZENODO URN].
 
 ## Training process
 
