@@ -1,12 +1,21 @@
 ## Unified Northern Alphabet OCR
 
-This is an attempt to build an OCR system for the languages written in Unified Northern Alphabet. Ideally there would be samples from all languages with which it is used. Only Public Domain data is used. The pages originate from the [Fenno-Ugrica collection](http://fennougrica.kansalliskirjasto.fi/), citations will be added soon.
+This is an attempt to build an OCR system for the languages written in Unified Northern Alphabet. Ideally there would be samples from all languages with which it is used. Only Public Domain data is used. The pages originate from the [Fenno-Ugrica collection](http://fennougrica.kansalliskirjasto.fi/). The books and their URN's are specified below:
+
+|Book | Language| URN |
+|-------|--------|
+|Kniga logkɘm guejka: vɘsmus pieļ vɘsmus egest opnuvmus|Kildin Saami|http://urn.fi/URN:NBN:fi-fe2016051212324|
+|Lovintan maɧьs lovintanut: oul lomt :oul hanis̷ tan tal maɧьs|NortherN Mansi|http://urn.fi/URN:NBN:fi-fe2014060426213|
+|Tolaŋgowa jeɧemņa tolaŋgobçɧ: ņurtej peļa: ņurtej toholambawa po jeɧemņa padawь|Tundra Nenets|http://urn.fi/URN:NBN:fi-fe2014061629286|
+|Togьltьptæt catь: togьltьpsatьļ nəkьrьl laka: posukoļ pelæktь: posukoļ tantaltьkьptæļ pot|Northern Selkup|http://urn.fi/URN:NBN:fi-fe2014061226436|
 
 In the 1930s, the so-called Unified Northern Alphabet (Единый северный алфавит) was used for creating literacy in 16 different languages of the Soviet Union. In this dataset there are sentences from four of them: Kildin Saami (sjd, kild1236), Northern Selkup (Selkup: sel, selk1253), Northern Mansi (Mansi: mns, mans1258) and Tundra Nenets (yrk, tund1255). 
 
 The data in this repository will primarily contain Ground Truth files for training OCR systems, but also the intermediate workflows and processing steps will be documented to the extend that is reasonable.
 
 If you want to get a quick idea of what this is about, just clone the repository and open file `temp-correction-1.html` in Firefox.
+
+The file `meta.csv` contains additional information about lines that are written on distinct fonts, i.e. titles.
 
 ## Training process
 
@@ -60,7 +69,12 @@ ocropus-gpageseg 'train_part_6/*.bin.png'
 ocropus-rpred -Q 4 -m ./models/02/una-02-d05059-00102000.pyrnn.gz 'train_part_6/*/*.bin.png'
 ocropus-gtedit html train_part_6/*/*.png -o temp-correction-6.html
 
-# This Evenko section is still unclear whether it actually is in 
+ocropus-nlbin raw_part_8/*.png -o train_part_8
+ocropus-gpageseg 'train_part_8/*.bin.png'
+ocropus-rpred -Q 4 -m ./models/02/una-02-d05059-00102000.pyrnn.gz 'train_part_8/*/*.bin.png'
+ocropus-gtedit html train_part_8/*/*.png -o temp-correction-8.html
+
+# This Evenki section is still unclear whether it actually is in 
 # Public Domain, so it will not be publicly added yet.
 #ocropus-nlbin raw_part_7/*.png -o train_part_7
 #ocropus-gpageseg 'train_part_7/*.bin.png'
@@ -78,6 +92,7 @@ ocropus-gtedit extract -O temp-correction-4.html
 ocropus-gtedit extract -O temp-correction-5.html
 ocropus-gtedit extract -O temp-correction-6.html
 # ocropus-gtedit extract -O temp-correction-7.html
+ocropus-gtedit extract -O temp-correction-8.html
 ```
 
 Adding the lines GitHub can be done with:
@@ -106,6 +121,7 @@ Current models, stored in `models` folder, were trained approximately with these
 ```
 ocropus-rtrain -c ./train/*/*gt.txt -o una-01-58a2a7 -d 20 ./train_part_1/*/*png
 ocropus-rtrain -c ./train/*/*gt.txt -o una-02-d05059 -d 20 ./train_part_1/*/*png
+ocropus-rtrain -c ./*/*/*gt.txt -o models/03/una-03-279620 -d 20 ./*/*/*png
 ``` 
 
 For actual testing the models should be trained on different subsets of the data.
