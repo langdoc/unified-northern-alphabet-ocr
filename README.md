@@ -1,6 +1,8 @@
-## Unified Northern Alphabet OCR
+[![DOI](https://zenodo.org/badge/154043563.svg)](https://zenodo.org/badge/latestdoi/154043563)
 
-This is an attempt to build an OCR system for the languages written in Unified Northern Alphabet. Ideally there would be samples from all languages with which it is used. Only Public Domain data is used. The pages originate from the [Fenno-Ugrica collection](http://fennougrica.kansalliskirjasto.fi/). The books and their URN's are specified below:
+## Unified Northern Alphabet OCR Ground Truth
+
+This dataset contains proofread OCR Ground Truth materials for Unified Northern Alphabet on different languages. Ideally there would be samples from all languages with which this writing system has been used. Only Public Domain data is used. The pages originate from the [Fenno-Ugrica collection](http://fennougrica.kansalliskirjasto.fi/). The books and their URN's are specified below:
 
 |Author|Book | Language| URN |
 |-------|-------|--------|--------|
@@ -21,7 +23,7 @@ Language and line specific metadata is stored in the file `meta_pages.csv`. The 
 
 This work has been done by Niko Partanen and Michael Rießler in Kone Foundation funded [IKDP-2](https://langdoc.github.io/IKDP-2/) research project. Please cite it using following template:
 
-    Partanen, Niko & Rießler, Michael 2018: Unified Northern Alphabet Ground Truth Package. [RELEASE VERSION]. [ZENODO URN].
+    Partanen, Niko & Rießler, Michael 2018: Unified Northern Alphabet OCR Ground Truth v0.9. DOI: 10.5281/zenodo.1493414.
 
 ## Training process
 
