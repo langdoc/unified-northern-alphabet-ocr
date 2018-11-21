@@ -3,7 +3,7 @@
 This is an attempt to build an OCR system for the languages written in Unified Northern Alphabet. Ideally there would be samples from all languages with which it is used. Only Public Domain data is used. The pages originate from the [Fenno-Ugrica collection](http://fennougrica.kansalliskirjasto.fi/). The books and their URN's are specified below:
 
 |Book | Language| URN |
-|-------|--------|
+|-------|--------|--------|
 |Kniga logkɘm guejka: vɘsmus pieļ vɘsmus egest opnuvmus|Kildin Saami|http://urn.fi/URN:NBN:fi-fe2016051212324|
 |Lovintan maɧьs lovintanut: oul lomt :oul hanis̷ tan tal maɧьs|NortherN Mansi|http://urn.fi/URN:NBN:fi-fe2014060426213|
 |Tolaŋgowa jeɧemņa tolaŋgobçɧ: ņurtej peļa: ņurtej toholambawa po jeɧemņa padawь|Tundra Nenets|http://urn.fi/URN:NBN:fi-fe2014061629286|
