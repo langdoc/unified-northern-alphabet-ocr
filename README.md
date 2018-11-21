@@ -2,12 +2,12 @@
 
 This is an attempt to build an OCR system for the languages written in Unified Northern Alphabet. Ideally there would be samples from all languages with which it is used. Only Public Domain data is used. The pages originate from the [Fenno-Ugrica collection](http://fennougrica.kansalliskirjasto.fi/). The books and their URN's are specified below:
 
-|Book | Language| URN |
-|-------|--------|--------|
-|Kniga logkɘm guejka: vɘsmus pieļ vɘsmus egest opnuvmus|Kildin Saami|http://urn.fi/URN:NBN:fi-fe2016051212324|
-|Lovintan maɧьs lovintanut: oul lomt :oul hanis̷ tan tal maɧьs|NortherN Mansi|http://urn.fi/URN:NBN:fi-fe2014060426213|
-|Tolaŋgowa jeɧemņa tolaŋgobçɧ: ņurtej peļa: ņurtej toholambawa po jeɧemņa padawь|Tundra Nenets|http://urn.fi/URN:NBN:fi-fe2014061629286|
-|Togьltьptæt catь: togьltьpsatьļ nəkьrьl laka: posukoļ pelæktь: posukoļ tantaltьkьptæļ pot|Northern Selkup|http://urn.fi/URN:NBN:fi-fe2014061226436|
+|Author|Book | Language| URN |
+|-------|-------|--------|--------|
+|Ƶuļov, P. N.|Kniga logkɘm guejka: vɘsmus pieļ vɘsmus egest opnuvmus|Kildin Saami|http://urn.fi/URN:NBN:fi-fe2016051212324|
+|Ƶuļov, P. N.|Lovintan maɧьs lovintanut: oul lomt :oul hanis̷ tan tal maɧьs|Northern Mansi|http://urn.fi/URN:NBN:fi-fe2014060426213|
+|Ƶuļov, P. N.|Tolaŋgowa jeɧemņa tolaŋgobçɧ: ņurtej peļa: ņurtej toholambawa po jeɧemņa padawь|Tundra Nenets|http://urn.fi/URN:NBN:fi-fe2014061629286|
+|Ƶuļov, P. N.|Togьltьptæt catь: togьltьpsatьļ nəkьrьl laka: posukoļ pelæktь: posukoļ tantaltьkьptæļ pot|Northern Selkup|http://urn.fi/URN:NBN:fi-fe2014061226436|
 
 In the 1930s, the so-called Unified Northern Alphabet (Единый северный алфавит) was used for creating literacy in 16 different languages of the Soviet Union. In this dataset there are sentences from four of them: Kildin Saami (sjd, kild1236), Northern Selkup (Selkup: sel, selk1253), Northern Mansi (Mansi: mns, mans1258) and Tundra Nenets (yrk, tund1255). 
 
