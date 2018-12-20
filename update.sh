@@ -20,5 +20,6 @@ git add train_part_3/*/*txt
 git add train_part_4/*/*txt
 git add train_part_5/*/*txt
 git add train_part_6/*/*txt
+git add train_part_8/*/*txt
 
 git commit -m "updating lines"
