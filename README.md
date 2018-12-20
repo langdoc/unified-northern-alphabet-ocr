@@ -23,7 +23,7 @@ Language and line specific metadata is stored in the file `meta_pages.csv`. The 
 
 This work has been done by Niko Partanen and Michael Rießler in Kone Foundation funded [IKDP-2](https://langdoc.github.io/IKDP-2/) research project. Please cite it using following template:
 
-    Partanen, Niko & Rießler, Michael 2018: Unified Northern Alphabet OCR Ground Truth v0.9. DOI: 10.5281/zenodo.1493414.
+    Partanen, Niko & Rießler, Michael 2018: Unified Northern Alphabet OCR Ground Truth v1.1. DOI: 10.5281/zenodo.1493414.
 
 ## Training process
 
