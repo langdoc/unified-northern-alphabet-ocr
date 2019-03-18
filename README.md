@@ -25,6 +25,10 @@ This work has been done by Niko Partanen and Michael Rießler in Kone Foundation
 
     Partanen, Niko & Rießler, Michael 2018: Unified Northern Alphabet OCR Ground Truth v1.1. DOI: 10.5281/zenodo.1493414.
 
+## Distributed models
+
+There are trained Tesseract and Ocropy models distributed with the training data, and these can be found from `models/tesseract` and `models/ocropy` directories. With Tesseract the `.traineddata` file should be moved into `tessdata` directory.
+
 ## Training process
 
 The model creation process was iterative, so that new data was added in several batches, each having been OCR'd with the model trained on data that had accumulated into that point. The iterations 1 and 2 contained simply data from all books in consecutive page order, with no attention to content. In the iteration 3 (planned) the page balance will be bit different, in order to achieve the wanted number of individual lines.
